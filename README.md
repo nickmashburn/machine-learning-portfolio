@@ -1,5 +1,7 @@
 # machine-learning-portfolio
-My public ML portfolio.
+My public ML portfolio. 
+
+Prospective Employers: Please send me a message on [LinkedIn](linkedin.com/in/nickmashburn) for access to a private repository with ongoing projects that haven't been made publicly visible yet. 
 
 <h3> Convolutional Neural Networks: </h3>
 
