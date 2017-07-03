@@ -1,5 +1,6 @@
 #CNN Model for CIFAR-10 using Keras w/Theano backend.
 #80% accuracy or so after ~100 epochs.
+#Can be modified to run on TensorFlow backend by changing 'th' to 'tf' in line 15.
 
 import numpy
 from keras.datasets import cifar10
