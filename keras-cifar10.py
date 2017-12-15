@@ -56,7 +56,7 @@ model.add(Dropout(0.3))
 model.add(Dense(num_classes, activation='softmax'))
 
 #Compile model
-epochs = 75
+epochs = 200
 lrate = 0.001
 decay = lrate/epochs
 model.compile(loss='categorical_crossentropy', optimizer='nadam', metrics=['accuracy'])
