@@ -7,7 +7,7 @@ from keras.datasets import cifar10
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten
 from keras.constraints import maxnorm
-from keras.optimizers import nadam
+from keras.optimizers import adam
 from keras.layers.convolutional import Convolution2D
 from keras.layers.convolutional import MaxPooling2D
 from keras.utils import np_utils
