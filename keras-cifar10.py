@@ -12,7 +12,7 @@ from keras.layers.convolutional import Convolution2D
 from keras.layers.convolutional import MaxPooling2D
 from keras.utils import np_utils
 from keras import backend as K
-K.set_image_dim_ordering('tf')
+K.set_image_dim_ordering('th')
 
 #Fix random seed for reproducibility
 seed = 7
