@@ -7,7 +7,7 @@ from keras.datasets import cifar10
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten
 from keras.constraints import maxnorm
-from keras.optimizers import adam
+from keras.optimizers import RMSprop
 from keras.layers.convolutional import Convolution2D
 from keras.layers.convolutional import MaxPooling2D
 from keras.utils import np_utils
@@ -59,7 +59,7 @@ model.add(Dense(num_classes, activation='softmax'))
 epochs = 200
 lrate = 0.001
 decay = lrate/epochs
-model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+model.compile(loss='categorical_crossentropy', optimizer='RMSprop', metrics=['accuracy'])
 print(model.summary())
 
 #Fit model
