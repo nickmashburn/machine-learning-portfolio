@@ -1,6 +1,6 @@
-#CNN Model for CIFAR-10 using Keras w/Theano backend.
+#CNN Model for CIFAR-10 using Keras w/TensorFlow backend.
 #80% accuracy or so after ~100 epochs.
-#Can be modified to run on TensorFlow backend by changing 'th' to 'tf' in line 15.
+#Can be modified to run on Theano backend by changing 'tf' to 'th' in line 15.
 
 import numpy
 from keras.datasets import cifar10
@@ -12,7 +12,7 @@ from keras.layers.convolutional import Convolution2D
 from keras.layers.convolutional import MaxPooling2D
 from keras.utils import np_utils
 from keras import backend as K
-K.set_image_dim_ordering('th')
+K.set_image_dim_ordering('tf')
 
 #Fix random seed for reproducibility
 seed = 7
@@ -44,7 +44,7 @@ model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Convolution2D(64, 3, 3, activation='relu', border_mode='same', W_constraint=maxnorm(3)))
 model.add(Dropout(0.3))
 
-model.add(Convolution2D(128, 3, 3, activation='relu', border_mode='same', W_constraint=maxnorm(3)))
+model.add(Convolution2D(32, 3, 3, activation='relu', border_mode='same', W_constraint=maxnorm(3)))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 
 model.add(Flatten())
